@@ -1,7 +1,7 @@
 [
     {
         "nombre": "Lampara",
-        "descripcion": "Lorem ipsum",
+        "descripcion": "Lampara de diseño industrial inspirado en los tulipanes, construida a partir de cemento, cobre y plástico PET",
         "fecha": "2022",
         "signo": "Industrial",
         "foto": "https://github.com/user-attachments/assets/9f9f997d-0255-4cf0-9839-b44cabb88ec8",
