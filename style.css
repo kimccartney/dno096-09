@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+html, body {
+  
+    background-color: #1B5E20;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100vh;
+}
+
+header, main{
+    padding: 1rem 2rem;    
+}
+
+header {
+    width: calc(50vw - 4rem);
+}
+
+@media (orientation: portrait) {
+    header {
+        width: calc(90vw - 4rem);
+    }
+}
+
+main{
+    width: calc(90vw - 4rem);
+    padding-bottom: 10vh;   
+}
+
+h1 {
+    font-family: "Gowun Batang", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: calc(1rem + 2vw);
+    text-shadow: 0 0 5px rgba(10, 20, 30, 0.5);
+    margin-left: -5px;
+    line-height: 1;
+    color: #E0F7FA;
+}
+
+h2 {
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: calc(1rem + 1vw);
+    line-height: 1;
+    color:#E0F7FA;
+}
+
+select{
+    padding:0.25rem;
+}
+
+a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+}
+
+main div{
+    width:24%;
+    margin:2% 1% 0 0;
+    background:#004D40;
+    display:inline-block;
+    vertical-align: bottom;
+    overflow: hidden;
+}
+
+@media (orientation: portrait) {
+    main div {
+        width:49%;
+    }
+}
+
+main div img {
+    width: 100%; /* Ajusta el ancho de la imagen */
+    max-width: 100%; /* Asegura que la imagen no crezca más allá de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+main div p {
+    text-align: center; /* Centrar el texto dentro del div */
+    margin: 10px auto; /* Elimina el doble punto y coma en la línea anterior */
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    padding: 0;
+    color: #E0F7FA; /* Cambia el color para que sea legible en el fondo oscuro */
+    width: 100%; /* Asegura que el párrafo ocupe todo el ancho del div */
+    word-wrap: break-word; /* Si hay palabras largas, se ajustarán */
+}
+
+p {
+    width: 300px; /* Ancho fijo */
+    text-align: ; /* Justificación del texto */
+    margin: 10px auto;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.7); /* Color para el párrafo general */
+}
+
+.esconde{
+    display: none;
+}

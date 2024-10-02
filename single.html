@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>🐙 Kimberly McCartney</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Portafolio de Diseño</h1>
+        <h2></h2>
+        <a href="index.html">&larr; VOLVER </a>
+    </header>
+
+    <main></main>
+
+    <script>
+        // Vamos a buscar un dato desde la URL
+        var x = new URLSearchParams(window.location.search).get("data");
+        console.log("Valor de x:", x);  // Verificar el valor de 'x'
+
+        // Constantes
+        const autoria = document.querySelector("h2");
+        const principal = document.querySelector("main");
+
+        const nombre = "Kimberly McCartney";
+        autoria.innerHTML = `Por ${nombre}`;
+
+        // Función para obtener datos del archivo JSON
+        async function astros() {
+            try {
+                const consulta = await fetch("https://raw.githubusercontent.com/Franirribarrat/dno096-08/refs/heads/main/data.js");
+                const data = await consulta.json();
+                console.log("Datos obtenidos:", data);  // Verificar los datos obtenidos
+
+                if (x && data[x]) {
+                    principal.innerHTML += `
+                        <h3>${data[x].nombre}</h3>
+                        <p>${data[x].fecha}</p>
+                        <p>${data[x].descripcion}</p>
+                        <img src="${data[x].foto}" alt="${data[x].nombre}">
+                    `;
+                } else {
+                    console.warn("No se encontró el valor de 'x' en los datos.");
+                    window.location.href = "index.html";
+                }
+            } catch (error) {
+                console.error("Error al obtener los datos:", error);
+            }
+        }
+
+        astros();
+    </script>
+</body>
+</html>
